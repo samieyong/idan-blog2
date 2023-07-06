@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+      <link rel="stylesheet" href="css/general-style.css" />
+      <title>i-dan Villa</title>
+   </head>
+   <body>
+
+      <!-- Navigation Section -->
+      <nav class="topnav">
+         <div class="container">
+            <div>
+               <a href="/home">
+                  <h1 class="logo">i-dan Villa</h1>
+               </a>
+
+               <span>If you don't get it, forget about it</span>
+            </div>
+            <ul class="nav-menu">
+               <a href="/home"><li>Home</li></a>
+               <a href="/services"><li>Goods & Sevices</li></a>
+               <a href="/contact"><li>Contact Us</li></a>
+               <a href="/logout"><li>Logout</li></a>
+            </ul>
+         </div>
+         <a href="javascript:void(0);" onclick="responsiveBar()">
+            <i class="fa-solid fa-bars res-bars"></i>
+         </a>
+      </nav>
+      <main>
+
+         <!-- Slide show section -->
+         <section class="slide-show">
+            <div class="slides">
+               <a href="#" target="_blank" class="slide-show-link">
+                  <img src="images/bg1.jpg" alt="biz-icon" class="biz-icon" />
+               </a>
+               <a href="#" target="_blank" class="slide-show-link">
+                  <img src="images/bg2.jpg" alt="biz-icon" class="biz-icon" />
+               </a>
+               <a href="#" target="_blank" class="slide-show-link">
+                  <img src="images/bg3.jpg" alt="biz-icon" class="biz-icon" />
+               </a>
+               <a href="#" target="_blank" class="slide-show-link">
+                  <img src="images/bg4.jpg" alt="biz-icon" class="biz-icon" />
+               </a>
+               <a href="#" target="_blank" class="slide-show-link">
+                  <img src="images/bg5.jpg" alt="biz-icon" class="biz-icon" />
+               </a>
+            </div>
+         </section>
+
+         <!-- Trending Section -->
+
+         <section class="trending-section">
+            <div class="container">
+               <h1>Trending</h1>
+               <div class="news">
+                  <article >
+                     <a href="/services" class="goods-and-services">
+                        <div class="goods-img"></div>
+                        <p class="title">Goods and Services</p>
+                        <h2>
+                           Get creativity at its best with Joviken Painting
+                           Services
+                        </h2>
+                        <p class="tag">
+                           Joseph Kenneth is a painter from another world. His
+                           talents transends this planet. He has developed
+                           designs that has left his clients dumbfounded. He
+                           does this for a starting price as low as N5000.
+                        </p>
+                     </a>
+                  </article>
+
+                  <article>
+                     <a href="/trending/latest1" class="latest">
+                        <div class="latest-img-wrapper latest-1"></div>
+                        <p class="title">Happy Birthday</p>
+                        <p class="tag">
+                           Master Warrant Officer Benedict Ukweze is a year
+                           older this week...
+                        </p>
+                     </a>
+                  </article>
+                  <article>
+                     <a href="/trending/latest2" class="latest">
+                        <div class="latest-img-wrapper latest-2"></div>
+                        <p class="title">i-dan first choice</p>
+                        <p class="tag">
+                           i-dan president of Nigeria first announcement
+                           triggers fuel price increase. Pump price rummored to
+                           hit N1000 by November. Japa on my mind...
+                        </p>
+                     </a>
+                  </article>
+                  <article>
+                     <a href="/trending/latest3" class="latest">
+                        <div class="latest-img-wrapper latest-3"></div>
+                        <p class="title">i-dan Babe</p>
+                        <p class="tag">
+                           Rhozzy Tee is rummored to be the best dancer in i-dan
+                           villa, itire branch. her swaggalicious dance steps
+                           and confidence with which she moves has raised eye
+                           brows...
+                        </p>
+                     </a>
+                  </article>
+                  <article>
+                     <a href="/trending/latest4" class="latest">
+                        <div class="latest-img-wrapper latest-4"></div>
+                        <p class="title">i-dan gee</p>
+                        <p class="tag">
+                           He is black, he is bold, he is handsome and he
+                           deosn't give a damn...
+                        </p>
+                     </a>
+                  </article>
+               </div>
+            </div>
+         </section>
+
+         <!-- Lamba Section -->
+         <section class="lamba-section" id="lambaSec">
+            <div class="container">
+               <h1>i-dan Lamba of the week</h1>
+               <hr />
+               <p>i-dan no dey tell lie, na the truth no dey correct</p>
+               <hr />
+               <p>Once, someone tried to tell i-dan a "knock knock" joke, but i-dan found out who was there and killed the bastard.</p>
+               <hr />
+               <p>i-dan once stepped in quicksand. The quicksand couldn't escape and nearly drowned.</p>
+               <hr />
+               <p>In his final year exam, i-dan wrote "violence" as the answer to all the questions. He got an A in the exam because i-dan solves all his problems with violence.</p>
+               
+               <hr />
+               <% for(let i=0; i<lambas.length ; i++) { %>
+                  <p><%= lambas[i].lamba %></p>
+                  <hr />
+               <% } %>
+               <span>we don't want peace, we want i-dan!</span>
+               <form action="/lamba" method="POST">
+                  <textarea
+                     name="lamba"
+                     class="comment-textarea"
+                     maxlength="400"
+                     placeholder="Enter your lamba"
+                  ></textarea>
+                  <button>POST</button>
+               </form>
+            </div>
+         </section>
+      </main>
+
+      <!-- Footer section -->
+      <footer>
+          <p>&copy; i-dan no need copywrite.</p>
+      </footer>
+      <script src="js/navScript.js"></script>
+      <script src="js/homeScript.js"></script>
+  </body>
+</html>

@@ -1,0 +1,52 @@
+<%- include('includes/header.ejs') %>
+
+    <section class="current-news">
+        <div class="container">
+            <h2>i-dan gee</h2>
+            <article>
+                <img src="../images/latest4.jpg" alt="Image of Benedict">
+                <div>
+                    <p>
+                        Oya commot body for fine boy, finest, freshest, fittest, the big fish himself. The name Christopher Tony brings
+                        to mind the iconic mavel character Tony Starks. Tony Starks share similar characteristics with Christopher Tony. 
+                        They both don't give a damn about what others think of them. Christopher tony is bold, he is black,
+                        he is handsome and like Tony Starks, he is stinking rich. So, if you see am for road make sure say you bill am. 
+                    </p>
+                    <p>
+                        Chris attractive features does not end in his looks. he is a business tycoon, He has a clothing line and a printing empire.
+                        If you are looking for where to get quality printing on your clothes, whatever the style or design, Chris gat you covered.
+                        Chris printing empire bost of one of the best quality printing in Nigeria. His craftmanship has always left his customers in awe.
+                    </p>
+                    <p>
+                        Chris made headlines when news broke that he has a girl friend in BRC. The news says Chris is in love and he is seeing stars.
+                        However, in recent interview with one of i-dan villa correspondents, Chris debonks all allegation of being in love and seeing stars. 
+                        He said he is only focusing on the hustle and concentrating on enlarging his printing empire.
+                    </p>
+                    <p>
+                        What do you think? Is Chris hiding something or is he telling the truth?
+                    </p>
+                </div>
+            </article>
+            <div class="comments">
+                <h3>Comments</h3>
+                <hr>
+                <% for(let i=0; i<comments.length ; i++) { %>
+                    <p><%= comments[i].comment %></p>
+                    <hr />
+                 <% } %>
+            </div> 
+
+            <form action="/trending/latest4" method="POST">
+                <textarea
+                   name="latest4comment"
+                   class="comment-textarea"
+                   rows="5"
+                   maxlength="150"
+                   placeholder="Comment"
+                ></textarea>
+                <button>POST</button>
+             </form>
+        </div>
+    </section>
+
+<%- include('includes/footer.ejs') %>

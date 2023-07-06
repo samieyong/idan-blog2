@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Teko:wght@400;600;700&display=swap');
+
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   text-decoration: none;
+   outline: transparent;
+}
+:root {
+   --primary: rgb(8, 29, 221);
+   --secondary: rgb(252, 81, 223);
+   --light-primary: rgb(171, 252, 225);
+   --light-primary2: rgb(214, 253, 240);
+}
+a {
+   color: var(--secondary);
+}
+p,
+a,
+button {
+   font-family: 'teko', sans-serif;
+   font-size: 1.4rem;
+   font-weight: 400;
+   letter-spacing: 0.05rem;
+}
+
+.html {
+   font-size: 62.5%;
+}
+h1 {
+   margin: 1rem 0;
+   color: var(--primary);
+   font-size: 2.4rem;
+   font-family: 'Teko', sans-serif;
+}
+h2 {
+   margin: 1rem 0;
+   font-family: 'Teko', sans-serif;
+}
+.rotate {
+   transform: rotateY(360deg);
+}
+main {
+   width: 100%;
+   height: 100vh;
+   display: flex;
+}
+.face-of-the-week img {
+   width: 100%;
+}
+.face-of-the-week {
+   text-align: center;
+   overflow: hidden;
+}
+.face-of-the-week,
+.login-container {
+   width: 50%;
+   height: 100%;
+}
+
+.login-container {
+   display: grid;
+   place-items: center;
+   text-align: center;
+}
+
+.cover {
+   position: relative;
+   height: 90%;
+   width: 65%;
+}
+form {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: space-around;
+   width: 100%;
+}
+form input,
+form button,
+.password-input-wrapper {
+   width: 100%;
+   height: 3rem;
+   margin-top: 0.5rem;
+}
+.password-input-wrapper {
+   position: relative;
+   margin-bottom: 1rem;
+}
+form input {
+   padding-left: 0.5rem;
+}
+.eye-icon {
+   position: absolute;
+   top: 1.3rem;
+   right: 0.3rem;
+   opacity: 0.6;
+   cursor: pointer;
+   font-size: 0.8rem;
+}
+form button {
+   cursor: pointer;
+   background-color: var(--light-primary);
+   border: 1px solid #9c9b99;
+}
+form button:hover {
+   background-color: var(--light-primary2);
+}
+.google {
+   width: 100%;
+   padding: 0.5rem 0;
+   background-color: rgb(245, 51, 51);
+   color: white;
+   border: 0.1rem solid white;
+   margin-top: 0.6rem;
+}
+.google:hover {
+   background-color: rgb(216, 8, 8);
+}
+.facebook {
+   width: 100%;
+   padding: 0.5rem 0;
+   color: white;
+   background-color: rgb(24, 119, 242);
+   border: 0.1rem solid white;
+   margin: 0.6rem 0;
+}
+.facebook:hover {
+   background-color: rgb(6, 51, 109);
+}
+.form-wrapper {
+   position: absolute;
+   width: 100%;
+   transition: transform 2s;
+   padding-bottom: 3rem;
+}
+p a:hover {
+   text-decoration: underline;
+}
+
+/* //////Responsive Section////// */
+@media screen and (max-width: 720px){
+   main{
+      display: block;
+      height: fit-content;
+   }
+   .face-of-the-week,
+.login-container {
+   width: 100%;
+}
+.cover{
+   width: 90%;
+}
+}

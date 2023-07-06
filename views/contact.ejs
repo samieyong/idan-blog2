@@ -1,0 +1,14 @@
+<%- include('includes/header.ejs') %>
+<section class="contact-section">
+    <div class="container">
+        <h2>Contact Us</h2>
+        <form action="/contact" method="POST" class="contact-form">
+            
+            <input type="text" placeholder="Name">
+            <input type="text" placeholder="Email">
+            <textarea rows="4" placeholder="message"></textarea>
+            <button>SEND</button>
+        </form>
+    </div>
+</section>
+<%- include('includes/footer.ejs') %>

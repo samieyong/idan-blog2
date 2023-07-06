@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link
+         rel="stylesheet"
+         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+      />
+      <link rel="stylesheet" href="css/login.css" />
+      <title>i-dan Villa</title>
+   </head>
+   <body>
+      <main>
+         <!-- Face of the week Section -->
+         <section class="face-of-the-week">
+            <h2>Face of the Week</h2>
+            <img src="images/faceOfTheWeek.jpg" alt="face of the week" />
+         </section>
+
+         <!-- login Section -->
+         <section class="login-container">
+            <div class="cover">
+               <h2>Welcome to</h2>
+               <h1 class="login-logo"><i>i-dan Villa</i></h1>
+               <div class="form-wrapper">
+                  <form action="/register" method="post" id="register">
+                     <input
+                        type="text"
+                        placeholder="Username"
+                        name="username"
+                        id="username"
+                     />
+                     <input
+                        type="email"
+                        placeholder="Email"
+                        name="email"
+                        id="email"
+                        required
+                     />
+                     <div class="password-input-wrapper">
+                        <input
+                           type="password"
+                           placeholder="Password"
+                           name="password"
+                           id="password"
+                           required
+                        />
+                        <i class="far fa-eye eye-icon" id="togglePassword"></i>
+                     </div>
+                     <input
+                        type="password"
+                        placeholder="Confirm Password"
+                        name="password2"
+                        id="password2"
+                        required
+                     />
+                     <button class="btn">Register</button>
+                     <a href="/auth/google" class="google"
+                        >Log in with Google</a
+                     >
+                     <a href="/auth/facebook" class="facebook"
+                        >Log in with Facebook</a
+                     >
+                  </form>
+                  <p class="login-para">
+                     Already registered?
+                     <a href="/" id="login-anchor">Login here</a>
+                  </p>
+               </div>
+            </div>
+         </section>
+      </main>
+      <script src="js/loginScript.js"></script>
+   </body>
+</html>

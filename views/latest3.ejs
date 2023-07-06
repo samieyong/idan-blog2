@@ -1,0 +1,52 @@
+<%- include('includes/header.ejs') %>
+
+    <section class="current-news">
+        <div class="container">
+            <h2>i-dan Babe</h2>
+            <article>
+                <img src="../images/latest3.jpg" alt="Image of Benedict">
+                <div>
+                    <p>
+                        See person pikin see as she fresh. If you see her dey come give her respect. The swaggalicious Rhozzy Tee is 
+                        a girl with many talents. She is an amiable saxophonist, a multitalented fashion designer and a graceful dancer.
+                        it was rummored that she was the one that designed and sew the trending gown that Nicky Minaj wore to the last 
+                        grammy award<sub>(lamba)</sub>.
+                    </p>
+                    <p>
+                        Rhozzy Tee made headlines when in a viral video she was spotted dancing and moving in a segelicious way. The dance 
+                        movement can confuse some people son to empty their accounts. A lot of dust has been raised as many argued that
+                        she is the best dancer in itire. A lot of other talented dancers are not finding this statements funny and are treatning
+                        to invite her for a dancing competition. 
+                    </p>
+                    <p>
+                        In a recent interview, Rhozzy Tee says she is not afraid to challenge anybody on the dance floor. she said let the haters 
+                        hate and let the potatoes potate, she is the best dancer and she no send anybody. Hairs has been roughed, shirts has been 
+                        turn and blows are about to be thrown. Will there be a faceoff? Will Rhozzy Tee brake on the dance floor or will she defeat
+                        her challengers? i-dan villa is on the sides watching how the story will onfold. Feel free to let us know your take on the 
+                        matter in the comment section.
+                    </p>
+                    <p>remember all comments in i-dan villa are annonymous, so feel free to say it as you feel it.</p>
+                </div>
+            </article>
+            <div class="comments">
+                <h3>Comments</h3>
+                <hr>
+                <% for(let i=0; i<comments.length ; i++) { %>
+                    <p><%= comments[i].comment %></p>
+                    <hr />
+                 <% } %>
+            </div> 
+            <form action="/trending/latest3" method="POST">
+                <textarea
+                   name="latest3comment"
+                   class="comment-textarea"
+                   rows="5"
+                   maxlength="150"
+                   placeholder="Comment"
+                ></textarea>
+                <button>POST</button>
+             </form>
+        </div>
+    </section>
+
+<%- include('includes/footer.ejs') %>

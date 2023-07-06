@@ -1,0 +1,48 @@
+<%- include('includes/header.ejs') %>
+    <section class="current-news">
+        <div class="container">
+            <h2>i-dan first choice</h2>
+            <article>
+                <img src="../images/latest2.jpeg" alt="Image of Tinubu">
+                <div>
+                    <p>
+                        The idan gan gan of the Federal Republic of Nigeria, His Excellency Bola Ahmed Tinubu in his first speech
+                        as the president of Nigeria made an announcement that has sent shivers to the spines of Nigerians. In the notorious
+                        speech the President said fuel subsidy will now be a thing of the past. No more subsidy. Subsidy o&#768; ti&#769; lo&#769;. Japa on my 
+                        mind!
+                    </p>
+                    <p>
+                        The cost of pump price in most filling station across the federation is currently &#8358;500. The country is not smilling. Men are not 
+                        happy. fuel is now competing with bitcoin. Any man that is running generator is now the bigest boy in town. Car owners are now doing
+                        trekking competition. The cost of transportation has skyrokected and the cost of living is chasing it. How will an average
+                        Nigerian cope in this trying times? When will the standard of living improve in Nigeria? These are the questions begging for answers.
+                    </p>
+                    <p>
+                        Despite the negative developemnt. idan has promise to use the subsidy funds to better the life of Nigerians. Many
+                        Nigerians are skeptical about this promise because promise and fail is normal thing in Nigeria and if idan do not
+                        keep his promise then he wouldn't be the first to do so. All eyes is now on idan and the subsidy money which ran into
+                        trillions of naira at 2022. i-dan villa is on top of the matter and we will keep updating you as e dey hot.
+                    </p>
+                    <div class="comments">
+                        <h3>Comments</h3>
+                        <hr>
+                        <% for(let i=0; i<comments.length ; i++) { %>
+                            <p><%= comments[i].comment %></p>
+                            <hr />
+                         <% } %>
+                    </div> 
+                    <form action="/trending/latest2" method="POST">
+                        <textarea
+                           name="latest2comment"
+                           class="comment-textarea"
+                           rows="5"
+                           maxlength="150"
+                           placeholder="Comment"
+                        ></textarea>
+                        <button>POST</button>
+                     </form>
+                </div>
+            </article>
+        </div>
+    </section>
+<%- include('includes/footer.ejs') %>

@@ -1,0 +1,48 @@
+<%- include('includes/header.ejs') %>
+
+    <section class="current-news">
+        <div class="container">
+            <h2>Happy Birthday</h2>
+            <article>
+                <img src="../images/latest1.jpg" alt="Image of Benedict">
+                <div>
+                    <p>
+                        The second of July 2023 was filled with celebration, singing and dancing. It was a day of joy, a day to celebrate,
+                        it was a special day. It was the birthday of one of the amiable sons of St. Anne's Catholic Church Itire.
+                        We are talking about none other than the Chief Security Officer, Master Warrant Officer Benedict
+                        Ukwueze<sub>(SAP)</sub>.
+                    </p>
+                    <p>
+                        An Administrator by profession, master organiser by hubbie and mouka foam dealer by trade. Needless to say, he is master of many
+                        trades. He is a man that knows his mettle and by no means a small fry. He has served and still serving in various high capacities
+                        in the Church. BRC holds him in high esteem, CYON respects him, and the church choir don't joke will him. Even the Parish Priest
+                        knows that he is among the timber and caliber of the church.
+                    </p>
+                    <p>
+                        Happy birthday to you brotherly! Dream big dreams, sail into the deep seas, soar the air with the eagles and brake a leg in all
+                        your endeavours. Cheers!
+                    </p>
+                </div>
+            </article>
+            <div class="comments">
+                <h3>Comments</h3>
+                <hr>
+                <% for(let i=0; i<comments.length ; i++) { %>
+                    <p><%= comments[i].comment %></p>
+                    <hr />
+                 <% } %>
+            </div>            
+            <form action="/trending/latest1" method="POST">
+                <textarea
+                   name="latest1comment"
+                   class="comment-textarea"
+                   rows="5"
+                   maxlength="150"
+                   placeholder="Comment"
+                ></textarea>
+                <button>POST</button>
+             </form>
+        </div>
+    </section>
+
+<%- include('includes/footer.ejs') %>
